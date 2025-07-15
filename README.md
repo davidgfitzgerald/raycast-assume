@@ -48,7 +48,7 @@ in [aws.sh](aws.sh).
 
 # Usage
 1. `Cmd + Space` (to open raycast)
-2. `login` (type `login`)
+2. `aws` (type `aws`)
 3. Choose service + account from dropdown
 4. Browser opens AWS to that service + account
 

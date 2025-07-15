@@ -4,47 +4,6 @@
 # 
 # Simply login to an AWS service and account (profile)
 # through raycast. Uses assume (by granted) to login.
-#
-# Requirements:
-#   - granted:
-#       brew tap common-fate/granted
-#       brew install granted
-#
-#   - raycast
-#       brew install --cask raycast
-#
-# Installation:
-#
-# 1. Copy this directory to ~/.raycast
-# 2. Tell raycast to look in ~/.raycast/scripts for scripts
-#    a. Cmd + Space (to open raycast)
-#    b. Cmd + , (to configure raycast)
-#    c. Navigate to Extensions -> Scripts
-#    d. Click on Script Commands
-#    e. Click Add Directories and add ~/.raycast/scripts
-# 
-# Dropdown Population:
-#
-# The AWS Profile dropdown must be populated manually and 
-# can be generated from a python script by
-# simply running:
-#
-#   python utils/profile_extractor.py
-#
-# This will generate profiles.json. The contents of this 
-# file must be copied into the data of the Profile argument
-# below.
-#
-# Usage:
-# 1. Cmd + Space (to open raycast)
-# 2. login (type login)
-# 3. Choose service + account from dropdown
-# 4. Browser opens AWS to that service + account
-#
-# Notes:
-# 
-# The Service dropdown arguments are populated from here:
-#   https://github.com/fwdcloudsec/granted/blob/main/pkg/console/service_map.go
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -57,7 +16,10 @@
 # @raycast.icon aws-logo.png
 
 # If using Chrome, if you want to open a default browser
-# profile, pass --browser-profile as demonstrated below:
+# profile, pass --browser-profile as demonstrated below
+# as per:
+# 
+# https://github.com/fwdcloudsec/granted/issues/886
 #
 # . assume --browser-profile Work -s $1 $2 &>/dev/null
 . assume -s $1 $2 &>/dev/null

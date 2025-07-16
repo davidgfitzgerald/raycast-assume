@@ -21,9 +21,7 @@
 
 # If using Chrome, if you want to open a default browser
 # profile, pass --browser-profile as demonstrated below
-# as per:
-# 
-# https://github.com/fwdcloudsec/granted/issues/886
+# (as per https://github.com/fwdcloudsec/granted/issues/886)
 #
 # . assume --browser-profile Work -s $1 $2 &>/dev/null
 . assume -s $1 $2 &>/dev/null
